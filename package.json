@@ -1,0 +1,52 @@
+{
+  "name": "eslint-config-dipcode",
+  "version": "0.0.1",
+  "description": "Shareable ESLint config for Dipcode.",
+  "main": "./src/config.js",
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives . && prettier --check './**/*.{js,yml,json,md}'",
+    "format": "prettier --write './**/*.{js,yml,json,md}'",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,yml,json,md}": "npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dipcode-software/stylelint-config-dipcode.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "dipcode"
+  ],
+  "author": "Team Dipcode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dipcode-software/stylelint-config-dipcode/issues"
+  },
+  "homepage": "https://github.com/dipcode-software/stylelint-config-dipcode#readme",
+  "exports": [
+    "./src/config.js"
+  ],
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.2.2",
+    "prettier-eslint": "^16.2.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "6.18.1",
+    "@typescript-eslint/parser": "6.18.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard-with-typescript": "43.0.0",
+    "eslint-plugin-jsdoc": "48.0.2",
+    "eslint-plugin-simple-import-sort": "10.0.0"
+  }
+}
