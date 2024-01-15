@@ -5,7 +5,6 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'jsdoc'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -15,20 +14,14 @@ module.exports = {
     'plugin:promise/recommended',
     'prettier',
   ],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'jsdoc', 'prettier'],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   rules: {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
-    'no-console': [
-      'error',
-      {
-        allow: ['warn', 'error'],
-      },
-    ],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    'prettier/prettier': ['error'],
   },
 };

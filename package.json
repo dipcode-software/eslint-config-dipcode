@@ -4,8 +4,9 @@
   "description": "Shareable ESLint config for Dipcode.",
   "main": "./src/config.js",
   "scripts": {
-    "lint": "eslint --report-unused-disable-directives . && prettier --check './**/*.{js,yml,json,md}'",
-    "format": "prettier --write './**/*.{js,yml,json,md}'",
+    "prettier:base": "prettier './**/*.{js,yml,json,md}'",
+    "lint": "npm run prettier:base -- --check",
+    "format": "npm run prettier:base -- --write",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -31,16 +32,8 @@
     "./src/config.js"
   ],
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.0",
-    "prettier": "3.2.2",
-    "prettier-eslint": "^16.2.0"
+    "husky": "8.0.0",
+    "prettier": "3.2.2"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "6.18.1",
