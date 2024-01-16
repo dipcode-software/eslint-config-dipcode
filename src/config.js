@@ -7,10 +7,10 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:promise/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsdoc/recommended-typescript-error',
     'plugin:import/recommended',
-    'plugin:promise/recommended',
     'prettier',
   ],
   plugins: ['@typescript-eslint', 'simple-import-sort', 'jsdoc', 'prettier'],
