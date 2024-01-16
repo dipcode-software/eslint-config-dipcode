@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-dipcode",
+  "name": "@dipcode/eslint-config",
   "version": "0.0.1",
   "description": "Shareable ESLint config for Dipcode.",
   "main": "./src/config.js",
