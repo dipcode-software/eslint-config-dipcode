@@ -10,7 +10,7 @@
 The package provides Dipcode's `.eslintrc` as an extensible shared config.
 
 1. Run `npm install --save-dev @dipcode/eslint-config`
-2. Add `"extends": "@dipcode/stylelint-config"` to your `.stylelintrc`
+2. Add `"extends": "@dipcode/eslint-config"` to your `.eslintrc.json`
 
 ## Links
 
