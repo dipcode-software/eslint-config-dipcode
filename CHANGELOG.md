@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Fixed changelog version links
+### Fixed
+
+- changelog version links
+
+### Added
+
+- `eslint-plugin-import` as dependency
 
 ## [v0.1.2] - 2024-01-17
 
