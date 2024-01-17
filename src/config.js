@@ -1,6 +1,6 @@
 'use strict';
 
-export default {
+module.exports = {
   env: {
     browser: true,
     es2021: true,
@@ -12,18 +12,17 @@ export default {
     'plugin:import/recommended',
     'plugin:promise/recommended',
     // This must be the last
-    'prettier',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'jsdoc', 'prettier'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'jsdoc'],
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  parserOptions: { project: 'tsconfig.json', sourceType: 'module' },
   rules: {
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-    'prettier/prettier': 'error',
   },
   ignorePatterns: ['node_modules'],
 };
