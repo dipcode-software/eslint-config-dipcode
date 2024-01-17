@@ -10,6 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jsdoc/recommended-typescript-error',
     'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:promise/recommended',
     // This must be the last
     'plugin:prettier/recommended',
@@ -25,4 +26,10 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
   },
   ignorePatterns: ['node_modules'],
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      node: true,
+    },
+  },
 };
