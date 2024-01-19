@@ -9,8 +9,35 @@
 
 The package provides Dipcode's `.eslintrc` as an extensible shared config.
 
-1. Run `npm install --save-dev @dipcode/eslint-config`
-2. Add `"extends": "@dipcode/eslint-config"` to your `.eslintrc.json`
+Install the config
+
+```sh
+npm install --save-dev @dipcode/eslint-config
+```
+
+Then configure eslint to use the configuration.
+
+### For JavaScript projects
+
+`.eslintrc.json`
+
+```json
+{
+  "root": true,
+  "extends": "@dipcode/eslint-config"
+}
+```
+
+### For TypeScript projects
+
+`.eslintrc.json`
+
+```json
+{
+  "root": true,
+  "extends": "@dipcode/eslint-config/typescript"
+}
+```
 
 ## Links
 

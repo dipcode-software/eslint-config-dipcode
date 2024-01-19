@@ -4,5 +4,6 @@
   "rules": {
     "no-console": ["error", { "allow": ["warn", "error"] }]
   },
+  "parserOptions": { "ecmaVersion": 2020 },
   "ignorePatterns": ["node_modules"]
 }
