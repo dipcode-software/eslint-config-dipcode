@@ -3,7 +3,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
   },
   extends: [
     'eslint:recommended',
@@ -24,12 +24,31 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    'import/extensions': [
+      2,
+      'always',
+      {
+        ignorePackages: true,
+        pattern: {
+          js: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      },
+    ],
   },
   ignorePatterns: ['node_modules'],
   settings: {
-    'import/resolver': {
-      typescript: true,
-      node: true,
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.json', '.ts', '.tsx', '.d.ts'],
+      },
+    },
+    'import/extensions': ['.js', '.mjs', '.ts', '.tsx', '.d.ts'],
+    'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
+  overrides: [{ files: ['*.ts', '*.tsx'], rules: { 'import/named': 'off', 'import/no-unresolved': 'off' } }],
 };
