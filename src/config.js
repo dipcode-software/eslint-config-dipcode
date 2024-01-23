@@ -23,4 +23,5 @@ module.exports = {
     'import/extensions': ['.js', '.mjs'],
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
+  overrides: [{ files: ['*.ts', '*.tsx'], rules: { 'import/named': 'off', 'import/no-unresolved': 'off' } }],
 };
