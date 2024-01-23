@@ -33,8 +33,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Install dependencies
-        run: |
-          npm pkg delete scripts.prepare
-          npm ci --omit=dev
+        run: HUSKY=0 npm ci
       - name: Run tests
         run: npm run lint
