@@ -11,6 +11,7 @@ module.exports = {
   ],
   plugins: ['simple-import-sort', 'jsdoc'],
   rules: {
+    'camelcase': 'error',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],

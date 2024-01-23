@@ -11,7 +11,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:promise/recommended',
-    // This must be the last
+    // This must be the last line
     'plugin:prettier/recommended',
   ],
   plugins: ['@typescript-eslint', ...base.plugins],
