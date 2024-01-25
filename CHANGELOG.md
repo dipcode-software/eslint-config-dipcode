@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.2.1] - 2024-01-25
 
+### Added
+
+- Use project parserOptions instead of defining our own.
+- `plugin:jsdoc/recommended-error` rules
+
 ### Fixed
 
 - Use project parserOptions instead of defining our own.
