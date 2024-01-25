@@ -16,7 +16,6 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', ...base.plugins],
   parser: '@typescript-eslint/parser',
-  parserOptions: { project: './tsconfig.json', sourceType: 'module' },
   rules: {
     ...base.rules,
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],

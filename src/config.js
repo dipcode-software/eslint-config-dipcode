@@ -6,6 +6,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:promise/recommended',
+    'plugin:jsdoc/recommended-error',
     // This must be the last
     'plugin:prettier/recommended',
   ],
